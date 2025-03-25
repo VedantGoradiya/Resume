@@ -222,15 +222,39 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #f9f9f9;
+  background-color: var(--mainBgColor); /* Background adapts to theme */
+  border: 1px solid var(--mainBorderColor);
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-history-item {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  color: var(--mainTextColor);
+}
+
+.work-history-title {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.work-history-institution {
+  font-weight: 400;
+  color: var(--secondaryTextColor);
+}
+
+.work-history-duration {
+  font-size: 0.9em;
+  color: var(--secondaryTextColor);
+}
+
+/* Adjustments for Dark Mode */
+[data-theme="dark"] .card--education-history {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 .work {
@@ -291,5 +315,10 @@ a {
 
   .work {
     display: block;
+  }
+
+  .card--education-history {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
