@@ -110,7 +110,6 @@ a {
   align-items: center;
   gap: 0.5em;
   text-decoration: none;
-  background-color: rgba(13, 162, 184, 0.1);
 }
 
 #socials--list a:hover {
@@ -205,8 +204,8 @@ a {
   /* padding-left: 2em; */
 }
 
-.card--work-history ul{
-    list-style: none;
+.card--work-history ul {
+  list-style: none;
 }
 
 .line-break {
@@ -301,13 +300,18 @@ a {
   }
 
   #socials--list {
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 1em;
   }
 
   #socials--list a {
     font-size: 1em;
     padding: 0.4em 1.2em;
+  }
+
+  #socials--list > a:last-of-type {
+    grid-column: 1 / -1;
   }
 
   #wrapper--techstack__grid {
