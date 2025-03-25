@@ -104,12 +104,13 @@ a {
   color: var(--secondaryTextColor);
   font-size: 1em;
   transition: 0.3s;
-  padding: 0.5em 1em;
+  padding: 0.5em 2em;
   border-radius: 5px;
   display: flex;
   align-items: center;
   gap: 0.5em;
   text-decoration: none;
+  background-color: rgba(13, 162, 184, 0.1);
 }
 
 #socials--list a:hover {
